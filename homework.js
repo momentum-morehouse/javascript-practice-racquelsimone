@@ -72,6 +72,18 @@ function minimum(numbers) {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+//let array = [5, 4, 3, 2, 1]///use case
+function selectionSort(array) {
+  let sortedArray = []//holder for new array we are returning
+  let arrayCopy = array.slice(); //to not mess up original data
+  for (let i = 1; i <= array.length; i++) {//for 1 up to the lenght of array; i++ means to repeat incrementally like a ticker.
+    let lowestNumber = minimum(arrayCopy); //finds the lowest #
+    sortedArray.push(lowestNumber); //pushes it to the new array
+    let idx = arrayCopy.indexOf(lowestNumber) //finds the index to remove it
+    arrayCopy.splice(idx, 1); //remove the identified smallest number
+  }
+  return sortedArray
+}
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
@@ -79,3 +91,7 @@ function minimum(numbers) {
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
 
+function textList{
+
+  return new
+}
